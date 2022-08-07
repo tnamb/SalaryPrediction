@@ -14,4 +14,5 @@ def predict():
     pred_sal = lr.predict([[int(x) for x in request.form.values()]])
     return render_template("index.html", prediction_text = "Your salary is" + str(pred_sal[0]))
 
-app.run(debug = True, use_reloader = False)
+if __name__ = "__main__":
+    app.run(debug = True, use_reloader = False)
